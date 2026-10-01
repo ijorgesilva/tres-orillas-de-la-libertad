@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cien obras para la portada de Tres orillas de la libertad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EEF1F4; --panel:#FFFFFF; --ink:#14213D; --muted:#56627A; --rule:#CBD2DC;
+  --ven:#C08A1E; --lat:#3E7C59; --esp:#A4452C; --eur:#3A6EA5; --usa:#7A2E4A; --abs:#8A94A6;
+  --chip:#DDE3EA; --chip-on:#14213D; --chip-on-ink:#FFFFFF; --star:#C08A1E;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#101622; --panel:#171F2E; --ink:#E6EBF2; --muted:#9AA6BA; --rule:#2B3548;
+  --chip:#222C3E; --chip-on:#E6EBF2; --chip-on-ink:#101622; --abs:#6F7A8E;
+}}
+:root[data-theme="dark"]{
+  --paper:#101622; --panel:#171F2E; --ink:#E6EBF2; --muted:#9AA6BA; --rule:#2B3548;
+  --chip:#222C3E; --chip-on:#E6EBF2; --chip-on-ink:#101622; --abs:#6F7A8E;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 150px)}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.55 "Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+header.hero{padding:56px 0 28px}
+.hero h1{font-family:"Libre Caslon Text",Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(2.1rem,6vw,3.6rem);line-height:1.05;margin:0 0 18px;letter-spacing:-.01em;max-width:14ch}
+.shores{display:flex;gap:6px;margin:0 0 22px;max-width:360px}
+.shores span{height:6px;flex:1}
+.shores span:nth-child(1){background:var(--usa)} .shores span:nth-child(2){background:var(--eur)} .shores span:nth-child(3){background:var(--ven)}
+.lede{font-family:"Libre Caslon Text",Georgia,serif;font-size:1.12rem;line-height:1.65;max-width:62ch;margin:0 0 14px}
+.fine{color:var(--muted);font-size:.9rem;max-width:70ch;margin:0 0 8px}
+.bar{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule);padding:12px 0 10px;padding-top:calc(12px + env(safe-area-inset-top,0px))}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.row+.row{margin-top:8px}
+.seg{display:inline-flex;border:1px solid var(--ink);border-radius:999px;overflow:hidden}
+.seg button{border:0;background:transparent;color:var(--ink);font:500 .88rem/1 "Public Sans",sans-serif;padding:9px 14px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.chip{border:0;border-radius:999px;background:var(--chip);color:var(--ink);font:500 .82rem/1 "Public Sans",sans-serif;padding:8px 12px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.chip i{width:8px;height:8px;border-radius:50%;display:inline-block}
+.chip[aria-pressed="true"]{background:var(--chip-on);color:var(--chip-on-ink)}
+input[type=search]{flex:1 1 200px;min-width:0;border:1px solid var(--rule);background:var(--panel);color:var(--ink);border-radius:8px;padding:9px 12px;font:400 .95rem "Public Sans",sans-serif}
+.act{border:1px solid var(--ink);background:transparent;color:var(--ink);border-radius:8px;padding:8px 12px;font:500 .85rem "Public Sans",sans-serif;cursor:pointer}
+.act.primary{background:var(--ink);color:var(--paper)}
+.count{color:var(--muted);font-size:.85rem;margin-left:auto}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--eur);outline-offset:2px}
+.part{font-family:"Libre Caslon Text",Georgia,serif;font-weight:400;font-size:1.6rem;margin:40px 0 4px}
+.partnote{color:var(--muted);margin:0 0 12px;max-width:64ch;font-size:.95rem}
+ol.list{list-style:none;margin:0;padding:0}
+.item{display:grid;grid-template-columns:64px 1fr;gap:4px 18px;padding:22px 0 22px 16px;border-top:1px solid var(--rule);position:relative}
+.item::before{content:"";position:absolute;left:0;top:22px;bottom:22px;width:4px;background:var(--c)}
+.num{font-family:"Libre Caslon Text",Georgia,serif;font-size:2rem;line-height:1;color:var(--muted);padding-top:2px}
+.item h3{font-family:"Libre Caslon Text",Georgia,serif;font-weight:700;font-size:1.2rem;line-height:1.3;margin:0}
+.orig{font-family:"Libre Caslon Text",Georgia,serif;font-style:italic;color:var(--muted);font-size:.95rem}
+.who{margin:4px 0 2px;font-weight:500}
+.where{color:var(--muted);font-size:.88rem;margin:0}
+.story{font-family:"Libre Caslon Text",Georgia,serif;line-height:1.7;margin:10px 0 8px;max-width:66ch}
+.warn{font-size:.85rem;color:var(--esp);margin:0 0 8px}
+.links{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.links a{color:var(--ink);font-weight:500;font-size:.88rem;text-decoration:none;border:1px solid var(--rule);background:var(--panel);border-radius:8px;padding:7px 11px}
+.links a:hover{border-color:var(--ink)}
+.pick{border:1px solid var(--rule);background:var(--panel);color:var(--ink);border-radius:8px;padding:7px 11px;font:500 .88rem "Public Sans",sans-serif;cursor:pointer}
+.pick[aria-pressed="true"]{background:var(--star);border-color:var(--star);color:#1a1300}
+.grp{font-size:.8rem;color:var(--muted)}
+.empty{padding:40px 0;color:var(--muted)}
+figure.art{grid-column:2;margin:0 0 12px;background:var(--chip);border-radius:8px;overflow:hidden;display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;max-width:420px}
+figure.art a{display:flex;width:100%;height:100%}
+figure.art img{width:100%;height:100%;object-fit:contain;display:block}
+figure.art.none{color:var(--muted);font-size:.82rem}
+ol.list:not(.grid) .item>div:last-child{grid-column:2}
+ol.list.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+ol.list.grid .item{display:block;padding:0 0 16px;border:1px solid var(--rule);border-radius:10px;background:var(--panel);overflow:hidden}
+ol.list.grid .item::before{top:0;bottom:auto;left:0;right:0;width:auto;height:4px;z-index:1}
+ol.list.grid .num{position:absolute;top:12px;left:12px;z-index:1;font-size:1rem;background:var(--paper);color:var(--ink);border-radius:999px;padding:3px 9px;line-height:1.2}
+ol.list.grid figure.art{grid-column:auto;max-width:none;border-radius:0;margin:0 0 12px}
+ol.list.grid .item>div:last-child{padding:0 14px}
+ol.list.grid .item h3{font-size:1.02rem}
+ol.list.grid .story{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;font-size:.92rem;line-height:1.55}
+ol.list.grid .where{display:none}
+#out{display:none;margin-top:10px}
+#out textarea{width:100%;min-height:140px;border:1px solid var(--rule);border-radius:8px;background:var(--panel);color:var(--ink);font:400 .88rem/1.5 "Public Sans",sans-serif;padding:10px}
+footer{padding:48px 0 64px;color:var(--muted);font-size:.88rem}
+footer p{max-width:70ch}
+@media (max-width:560px){.item{grid-template-columns:40px 1fr;gap:4px 12px}.num{font-size:1.4rem}.count{margin-left:0;width:100%}}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <h1>Cien obras para una portada</h1>
+  <div class="shores" aria-hidden="true"><span></span><span></span><span></span></div>
+  <p class="lede">Propuestas de dominio público para <em>Tres orillas de la libertad</em>: cincuenta abstractas y cincuenta con historia detrás. Marca las que te gusten y copia tu selección para enviársela al autor.</p>
+  <p class="fine">Criterio de dominio público: autores fallecidos antes de 1956, libres en Venezuela (60 años tras la muerte) y en casi todo el mundo (70 años). Dos excepciones van señaladas. La abstracción venezolana clásica (Soto, Cruz-Diez, Otero, Gego) sigue protegida; se podría licenciar con sus herederos, pero no entra aquí.</p>
+  <p class="fine">Las imágenes son miniaturas descargadas de Wikimedia Commons (pulsa una para abrirla). Los enlaces abren una búsqueda ya armada en Google Imágenes o en Wikimedia Commons. Años y ubicaciones conviene confirmarlos en el museo antes de imprimir; para alta resolución sin restricciones, prioriza Commons, el Met, la National Gallery of Art y el Rijksmuseum.</p>
+</header>
+</div>
+<div class="bar"><div class="wrap">
+  <div class="row">
+    <div class="seg" role="group" aria-label="Tipo de obra">
+      <button data-s="all" aria-pressed="true">Todas</button>
+      <button data-s="a" aria-pressed="false">Abstractas</button>
+      <button data-s="h" aria-pressed="false">Con historia</button>
+    </div>
+    <input type="search" id="q" placeholder="Buscar autor, obra o tema" aria-label="Buscar">
+  </div>
+  <div class="row" id="chips"></div>
+  <div class="row">
+    <div class="seg" role="group" aria-label="Vista" id="view">
+      <button data-v="list" aria-pressed="true">Lista</button>
+      <button data-v="grid" aria-pressed="false">Cuadrícula</button>
+    </div>
+    <button class="act" id="onlyPicks" aria-pressed="false">Ver solo mi selección</button>
+    <button class="act primary" id="copy">Copiar mi selección</button>
+    <span class="count" id="count"></span>
+  </div>
+  <div id="out"><textarea id="outText" readonly aria-label="Tu selección"></textarea></div>
+</div></div>
+<main class="wrap" id="main"></main>
+<div class="wrap"><footer>
+  <p>Sobre las fotografías: en Venezuela y la Unión Europea, la foto fiel de una pintura en dominio público no genera derechos nuevos, pero revisa la licencia de cada archivo en Commons antes de usarlo. Esto es orientación práctica, no asesoría legal.</p>
+</footer></div>
+<script>
+const D=[
+// ABSTRACTAS — puente latinoamericano
+["a","Puente latinoamericano","Luz tras mi enramada","","Armando Reverón","1926","Galería de Arte Nacional, Caracas","Reverón en Macuto, frente al mar, disolviendo el paisaje en luz blanca hasta casi la abstracción. Es la orilla venezolana pintada por un venezolano, y en dominio público desde 2015.","Armando Reverón Luz tras mi enramada"],
+["a","Puente latinoamericano","Paisaje blanco","","Armando Reverón","1929","Galería de Arte Nacional, Caracas","El período blanco: costa, cielo y mar fundidos en una sola vibración. Tipografía oscura encima funciona muy bien.","Armando Reverón Paisaje blanco 1929"],
+["a","Puente latinoamericano","Paisajes de Auvers-sur-Oise (serie)","","Emilio Boggio","c. 1910–1919","Galería de Arte Nacional y colecciones varias","Caraqueño que pintó en Francia; sus últimos paisajes son pinceladas casi autónomas. Un venezolano entre dos orillas, literalmente.","Emilio Boggio pintura Auvers-sur-Oise"],
+["a","Puente latinoamericano","América invertida","","Joaquín Torres-García","1943","Museo Torres García, Montevideo","El mapa de Sudamérica puesto al revés: «nuestro norte es el Sur». Es un manifiesto sobre pensar el derecho desde aquí y no como copia. Dibujo sencillo, ideal para portada tipográfica.","Torres-García América invertida 1943"],
+["a","Puente latinoamericano","Arte constructivo (serie)","","Joaquín Torres-García","c. 1930–1943","Museo Torres García y colecciones varias","Retículas con símbolos universales en cada celda: orden geométrico con contenido humano. Muy latinoamericano y muy de libro académico.","Torres-García arte constructivo universal"],
+["a","Puente latinoamericano","Obras vibracionistas (serie)","","Rafael Barradas","1917–1919","Museo Nacional de Artes Visuales, Montevideo","El uruguayo que inventó el vibracionismo en Barcelona: la ciudad moderna fragmentada en planos. Une América y España.","Rafael Barradas vibracionismo"],
+// orillas y luz
+["a","Orillas y luz","Composición 10 en blanco y negro (Muelle y océano)","Pier and Ocean","Piet Mondrian","1915","Kröller-Müller Museum","Un muelle entrando al mar reducido a signos más y menos. Es la metáfora de la orilla convertida en abstracción pura.","Mondrian Pier and Ocean 1915 Composition 10"],
+["a","Orillas y luz","Monje junto al mar","Der Mönch am Meer","Caspar David Friedrich","1808–1810","Alte Nationalgalerie, Berlín","Una figura mínima ante una orilla inmensa y vacía: el individuo frente a algo mayor que él. Deja todo el cielo libre para el título.","Caspar David Friedrich Monk by the Sea"],
+["a","Orillas y luz","Castillo de Norham, amanecer","Norham Castle, Sunrise","J. M. W. Turner","c. 1845","Tate Britain","Un río, una orilla y un castillo apenas sugeridos en bruma dorada. Turner anticipa la abstracción medio siglo antes.","Turner Norham Castle Sunrise"],
+["a","Orillas y luz","Tormenta de nieve: vapor frente a la bocana","Snow Storm – Steam-Boat off a Harbour's Mouth","J. M. W. Turner","1842","Tate Britain","Un barco que no logra entrar a puerto, envuelto en torbellino. Remolino de fuerzas sin forma fija.","Turner Snow Storm Steam-Boat off a Harbour's Mouth"],
+["a","Orillas y luz","Nocturno en negro y oro: el cohete que cae","Nocturne in Black and Gold – The Falling Rocket","James McNeill Whistler","1875","Detroit Institute of Arts","Tiene juicio propio: Ruskin la acusó de ser pintura arrojada a la cara del público; Whistler lo demandó por difamación en 1878, ganó y le concedieron un cuarto de penique. Un pleito sobre la libertad de expresión artística.","Whistler Nocturne in Black and Gold The Falling Rocket"],
+["a","Orillas y luz","El perro semihundido","","Francisco de Goya","1820–1823","Museo del Prado","De las Pinturas negras: una cabeza diminuta ante un vacío ocre. Casi abstracto, español y cargado de soledad frente al poder.","Goya El perro semihundido Prado"],
+// geométrico
+["a","Geométrico y tensión","Composición VIII","","Wassily Kandinsky","1923","Guggenheim, Nueva York","Círculos, líneas y ángulos en equilibrio tenso. Clásico de la abstracción; elegante y legible en miniatura.","Kandinsky Composition VIII 1923"],
+["a","Geométrico y tensión","Amarillo-Rojo-Azul","","Wassily Kandinsky","1925","Centre Pompidou, París","Tres campos de color que dialogan sin fundirse: tres sistemas, tres orillas.","Kandinsky Yellow Red Blue 1925"],
+["a","Geométrico y tensión","Varios círculos","Einige Kreise","Wassily Kandinsky","1926","Guggenheim, Nueva York","Esferas superpuestas sobre fondo oscuro, como órbitas que se tocan. Muy limpia para portada.","Kandinsky Several Circles 1926"],
+["a","Geométrico y tensión","Composición II en rojo, azul y amarillo","","Piet Mondrian","1930","Kunsthaus Zürich","Orden, proporción y límites: la estética del Estado de derecho. Admite recorte sin perder identidad.","Mondrian Composition II in Red Blue and Yellow 1930"],
+["a","Geométrico y tensión","Broadway Boogie Woogie","","Piet Mondrian","1942–1943","MoMA, Nueva York","Pintado en Nueva York tras huir de Europa: la retícula europea transformada por el ritmo americano.","Mondrian Broadway Boogie Woogie","Libre en Venezuela y Europa; en EE. UU. su situación puede variar."],
+["a","Geométrico y tensión","Cuadrado negro","","Kazimir Malévich","1915","Galería Tretiakov, Moscú","Se colgó en la esquina reservada a los íconos: una ruptura total con el orden anterior. Luego el régimen soviético lo arrinconó.","Malevich Black Square 1915"],
+["a","Geométrico y tensión","Composición suprematista: blanco sobre blanco","","Kazimir Malévich","1918","MoMA, Nueva York","Un cuadrado blanco sobre fondo blanco, casi invisible: lo que existe en el texto pero apenas se percibe en la realidad.","Malevich White on White 1918"],
+["a","Geométrico y tensión","Supremus n.º 58","","Kazimir Malévich","1916","Museo Estatal Ruso","Bloques de color flotando en diagonal, en tensión dinámica.","Malevich Supremus No. 58"],
+["a","Geométrico y tensión","Arquitectónica pictórica","","Liubov Popova","1917–1918","MoMA y colecciones varias","Planos superpuestos que construyen un espacio. Arquitectura, como una constitución.","Lyubov Popova Painterly Architectonic"],
+["a","Geométrico y tensión","Construcción espacio-fuerza","","Liubov Popova","1921","Museo Estatal de Arte Contemporáneo, Salónica","Líneas de fuerza que se cruzan sobre fondo de madera. Tensión pura.","Lyubov Popova Space-Force Construction"],
+["a","Geométrico y tensión","Golpead a los blancos con la cuña roja","","El Lissitzky","1919","Colecciones varias","Un cartel político hecho solo con geometría: la cuña roja penetra el círculo blanco. Advertencia: la carga soviética es explícita.","El Lissitzky Beat the Whites with the Red Wedge"],
+["a","Geométrico y tensión","Proun 19D","","El Lissitzky","1920–1921","MoMA, Nueva York","Volúmenes flotantes, entre pintura y arquitectura. Sobrio y moderno.","El Lissitzky Proun 19D"],
+["a","Geométrico y tensión","Contra-composición V","","Theo van Doesburg","1924","Stedelijk Museum, Ámsterdam","Rompió con Mondrian por introducir la diagonal: el desacuerdo doctrinal hecho pintura.","Theo van Doesburg Counter-Composition V"],
+["a","Geométrico y tensión","Contra-composición simultánea","","Theo van Doesburg","1929–1930","MoMA, Nueva York","Dos retículas superpuestas en ángulos distintos: dos sistemas sobre el mismo plano.","Theo van Doesburg Simultaneous Counter-Composition"],
+["a","Geométrico y tensión","Composición de círculos y ángulos superpuestos","","Sophie Taeuber-Arp","1930","MoMA, Nueva York","Formas simples y precisas; muy limpia para una portada académica.","Sophie Taeuber-Arp Composition of Circles and Overlapping Angles"],
+["a","Geométrico y tensión","Contraste de formas","Contraste de formes","Fernand Léger","1913","MoMA y Philadelphia Museum of Art","El título lo dice todo: formas que se oponen. En dominio público desde 2026.","Fernand Léger Contrast of Forms 1913"],
+["a","Geométrico y tensión","Composición A XX","","László Moholy-Nagy","1924","Centre Pompidou, París","Planos translúcidos que se superponen sin taparse, como ordenamientos que se influyen.","Moholy-Nagy Composition A XX 1924"],
+["a","Geométrico y tensión","Composición unista (serie)","","Władysław Strzemiński","c. 1931–1934","Muzeum Sztuki, Łódź","Superficie casi uniforme, textura mínima. Sobria, casi monocroma.","Strzeminski unist composition"],
+["a","Geométrico y tensión","Composición suprematista","","Iván Kliun","c. 1916–1917","Galería Tretiakov y colecciones varias","Formas geométricas en equilibrio sobre fondo claro; muy adaptable.","Ivan Kliun suprematist composition"],
+["a","Geométrico y tensión","Franja verde","","Olga Rozánova","1917","Museo del Kremlin de Rostov","Una sola franja vertical sobre blanco, décadas antes del campo de color. Minimalismo extremo para lomo y portada.","Olga Rozanova Green Stripe 1917"],
+["a","Geométrico y tensión","Formas circulares. Sol n.º 2","","Robert Delaunay","1912–1913","Centre Pompidou, París","Discos de color en rotación, luz convertida en ritmo.","Robert Delaunay Formes circulaires Soleil"],
+["a","Geométrico y tensión","Ritmo n.º 1","","Robert Delaunay","1938","Musée d'Art Moderne de Paris","Círculos concéntricos monumentales; impacto visual fuerte.","Robert Delaunay Rythme n°1 1938"],
+// lírico
+["a","Lírico y orgánico","Composición VII","","Wassily Kandinsky","1913","Galería Tretiakov, Moscú","Considerada su obra cumbre: un caos organizado. Densa, mejor para portada completa sin recuadros.","Kandinsky Composition VII 1913"],
+["a","Lírico y orgánico","Improvisación 28 (segunda versión)","","Wassily Kandinsky","1912","Guggenheim, Nueva York","Energía pura antes de la Gran Guerra; colores cálidos contra fríos.","Kandinsky Improvisation 28 second version"],
+["a","Lírico y orgánico","Ad Parnassum","","Paul Klee","1932","Kunstmuseum Berna","Mosaico de puntos que forma una pirámide: la jerarquía normativa, si se quiere leer así.","Paul Klee Ad Parnassum 1932"],
+["a","Lírico y orgánico","Castillo y sol","","Paul Klee","1928","Colección privada","Una ciudadela de formas geométricas bajo un sol rojo. Cálida y reconocible.","Paul Klee Castle and Sun 1928"],
+["a","Lírico y orgánico","Polifonía","","Paul Klee","1932","Kunstmuseum Basilea","Varias capas que suenan a la vez sin anularse: tres voces jurídicas.","Paul Klee Polyphony 1932"],
+["a","Lírico y orgánico","Los diez mayores n.º 7, Adultez","","Hilma af Klint","1907","Fundación Hilma af Klint","Pintó abstracto antes que Kandinsky y pidió que su obra se ocultara veinte años tras su muerte.","Hilma af Klint The Ten Largest No. 7 Adulthood"],
+["a","Lírico y orgánico","Retablo n.º 1","","Hilma af Klint","1915","Fundación Hilma af Klint","Triángulo ascendente con disco solar dorado: estructura y aspiración.","Hilma af Klint Altarpiece No. 1"],
+["a","Lírico y orgánico","El cisne n.º 17","","Hilma af Klint","1915","Fundación Hilma af Klint","De la serie sobre la dualidad: dos mitades opuestas que se equilibran.","Hilma af Klint The Swan No. 17"],
+["a","Lírico y orgánico","Naturaleza simbolizada n.º 2","","Arthur Dove","1911","Art Institute of Chicago","El primer abstracto estadounidense: la orilla americana en su propio lenguaje.","Arthur Dove Nature Symbolized No. 2"],
+["a","Lírico y orgánico","Sirenas de niebla","Fog Horns","Arthur Dove","1929","Colorado Springs Fine Arts Center","Ondas de sonido sobre el agua; muy sencilla y marina.","Arthur Dove Fog Horns 1929"],
+["a","Lírico y orgánico","Fantasía cromática","","Augusto Giacometti","1914","Kunsthaus Zürich","Mosaico libre de color, casi vitral. Muy vibrante.","Augusto Giacometti Chromatic Fantasy 1914"],
+["a","Lírico y orgánico","Gloria a Dios","Glory be to God","Georgiana Houghton","1864","Victorian Spiritualists' Union, Melbourne","Abstracción medio siglo antes de que existiera la palabra. Su exposición de 1871 fue un fracaso y la redescubrieron en 2016.","Georgiana Houghton Glory be to God"],
+["a","Lírico y orgánico","Formas en lucha","Kämpfende Formen","Franz Marc","1914","Pinakothek der Moderne, Múnich","Una fuerza roja y una negra que chocan en espiral. Marc murió en Verdún dos años después. Perfecta para el choque entre modelos.","Franz Marc Fighting Forms 1914"],
+["a","Lírico y orgánico","Mi cielo es rojo","Mein Himmel ist rot","Otto Freundlich","1933","Colecciones varias","Los nazis pusieron una escultura suya en la portada del catálogo de «arte degenerado»; fue asesinado en 1943. Abstracción con historia de persecución estatal.","Otto Freundlich Mein Himmel ist rot"],
+["a","Lírico y orgánico","Sincromía en naranja: hacia la forma","","Morgan Russell","1913–1914","Buffalo AKG Art Museum","Color organizado como música; fundador del sincromismo estadounidense.","Morgan Russell Synchromy in Orange To Form"],
+["a","Lírico y orgánico","Udnie","","Francis Picabia","1913","Centre Pompidou, París","Movimiento fragmentado en planos metálicos; moderno y editorial.","Picabia Udnie 1913"],
+// HISTORIAS — Venezuela
+["h","Venezuela","El 19 de abril de 1810","","Juan Lovera","1835","Museo de Caracas, Concejo Municipal","El Cabildo de Caracas desconoce al capitán general: el inicio del gobierno propio. Pintada por un testigo de la época.","Juan Lovera 19 de abril de 1810"],
+["h","Venezuela","El 5 de julio de 1811","","Juan Lovera","1838","Museo de Caracas, Concejo Municipal","La declaración de independencia vista por un contemporáneo; documento visual de primera mano.","Juan Lovera 5 de julio de 1811"],
+["h","Venezuela","Firma del Acta de la Independencia","","Martín Tovar y Tovar","1883","Palacio Federal Legislativo, Caracas","Ese Congreso redactó la Constitución de 1811, primera de Hispanoamérica, inspirada en la de EE. UU. y en la Declaración francesa: las tres orillas en un solo documento. Probablemente la opción más fuerte.","Tovar y Tovar Firma del Acta de la Independencia"],
+["h","Venezuela","Batalla de Carabobo","","Martín Tovar y Tovar","1887","Salón Elíptico, Palacio Federal Legislativo","La independencia conquistada; panorámica monumental que se recorta bien en franjas.","Tovar y Tovar Batalla de Carabobo"],
+["h","Venezuela","Miranda en La Carraca","","Arturo Michelena","1896","Galería de Arte Nacional, Caracas","Miranda luchó en la revolución de EE. UU., fue general de la Revolución francesa y murió preso en Cádiz. Un solo hombre que tocó las tres orillas del libro y terminó sin garantías.","Arturo Michelena Miranda en La Carraca"],
+["h","Venezuela","Carlota Corday camino del cadalso","","Arturo Michelena","1889","Galería de Arte Nacional, Caracas","La Revolución francesa devorando a los suyos, pintada por un venezolano en París.","Arturo Michelena Carlota Corday"],
+["h","Venezuela","Vuelvan caras","","Arturo Michelena","1890","Colección nacional, Caracas","Páez en Las Queseras del Medio: la voluntad que invierte la derrota.","Arturo Michelena Vuelvan caras"],
+["h","Venezuela","La miseria","","Cristóbal Rojas","1886","Galería de Arte Nacional, Caracas","La pobreza que ninguna declaración de derechos alcanza: el realismo social venezolano.","Cristóbal Rojas La miseria 1886"],
+["h","Venezuela","El purgatorio","","Cristóbal Rojas","1890","Galería de Arte Nacional, Caracas","Figuras suspendidas entre castigo y redención; lectura alegórica sobre la espera de justicia.","Cristóbal Rojas El purgatorio 1890"],
+["h","Venezuela","La muerte de Girardot en Bárbula","","Cristóbal Rojas","1883","Galería de Arte Nacional, Caracas","El sacrificio por la república; pintada para el centenario de Bolívar.","Cristóbal Rojas Muerte de Girardot en Bárbula"],
+["h","Venezuela","La muerte del Libertador","","Antonio Herrera Toro","1883","Colección nacional, Caracas","El fin del proyecto bolivariano en soledad; el ideal que sobrevive a su autor.","Antonio Herrera Toro muerte del Libertador"],
+// Latinoamérica
+["h","Latinoamérica","El juramento de los Treinta y Tres Orientales","","Juan Manuel Blanes","1877","Museo Nacional de Artes Visuales, Montevideo","Juran la libertad en la orilla del río Uruguay al desembarcar. Una orilla literal.","Juan Manuel Blanes Juramento de los Treinta y Tres Orientales"],
+["h","Latinoamérica","Un episodio de la fiebre amarilla en Buenos Aires","","Juan Manuel Blanes","1871","Museo Nacional de Artes Visuales, Montevideo","La epidemia expuso el abandono de los pobres por el Estado; se convirtió en denuncia pública.","Juan Manuel Blanes fiebre amarilla Buenos Aires"],
+["h","Latinoamérica","Independencia o muerte","Independência ou Morte","Pedro Américo","1888","Museu Paulista, São Paulo","El grito de Ipiranga; la independencia como gesto fundacional.","Pedro Américo Independência ou Morte"],
+["h","Latinoamérica","Murales de la Suprema Corte de Justicia","","José Clemente Orozco","1940–1941","Suprema Corte de Justicia de la Nación, México","Pintó a la Justicia dormida y a jueces corruptos en el propio edificio de la Corte; a los ministros no les gustó. Un mural sobre el Poder Judicial dentro del Poder Judicial.","Orozco murales Suprema Corte de Justicia La Justicia","Libre en Venezuela; en México los derechos duran 100 años."],
+// España
+["h","España","El 3 de mayo de 1808 en Madrid","","Francisco de Goya","1814","Museo del Prado","El Estado armado frente al individuo desarmado. El ícono universal de la violación de derechos.","Goya El 3 de mayo de 1808"],
+["h","España","El 2 de mayo de 1808 en Madrid","","Francisco de Goya","1814","Museo del Prado","El pueblo que se levanta sin ejército ni ley que lo ampare.","Goya El 2 de mayo de 1808 carga de los mamelucos"],
+["h","España","Saturno devorando a su hijo","","Francisco de Goya","1820–1823","Museo del Prado","El poder que devora a quienes debía proteger. Fuerte, quizá demasiado para una portada académica.","Goya Saturno devorando a su hijo"],
+["h","España","Duelo a garrotazos","","Francisco de Goya","1820–1823","Museo del Prado","Dos hombres se golpean mientras se hunden en el barro: la imagen clásica de las dos Españas.","Goya Duelo a garrotazos"],
+["h","España","El sueño de la razón produce monstruos","","Francisco de Goya","1799","Museo del Prado y Biblioteca Nacional de España","Cuando la razón se duerme, aparecen los monstruos. Grabado en blanco y negro, ideal para portada sobria.","Goya El sueño de la razón produce monstruos"],
+["h","España","Los desastres de la guerra (serie)","","Francisco de Goya","1810–1815","Museo del Prado y Biblioteca Nacional de España","Ochenta grabados sobre abusos contra civiles; publicados solo después de su muerte.","Goya Los desastres de la guerra"],
+["h","España","Fusilamiento de Torrijos y sus compañeros en las playas de Málaga","","Antonio Gisbert","1888","Museo del Prado","Fusilados en una playa en 1831 por intentar restaurar la Constitución de 1812. Orilla, constitución y represión en un solo cuadro: encaje casi perfecto.","Gisbert Fusilamiento de Torrijos playas de Málaga"],
+["h","España","Los comuneros Padilla, Bravo y Maldonado en el patíbulo","","Antonio Gisbert","1860","Congreso de los Diputados, Madrid","Ejecutados en 1521 por defender las libertades de Castilla frente al rey.","Gisbert Los comuneros en el patíbulo"],
+["h","España","La promulgación de la Constitución de 1812","","Salvador Viniegra","1912","Museo de las Cortes de Cádiz","La Pepa, con diputados americanos entre sus autores: la raíz común de España y América.","Salvador Viniegra Promulgación de la Constitución de 1812"],
+["h","España","Juramento de las Cortes de Cádiz en 1810","","José Casado del Alisal","1862–1863","Congreso de los Diputados, Madrid","El primer parlamento soberano de España, reunido en una ciudad sitiada.","Casado del Alisal Juramento de las Cortes de Cádiz 1810"],
+// Europa
+["h","Europa","Declaración de los derechos del hombre y del ciudadano","","Jean-Jacques-François Le Barbier","c. 1789","Musée Carnavalet, París","La Declaración pintada como tablas de la ley. Es la fuente directa de la orilla europea del libro.","Le Barbier Déclaration des droits de l'homme et du citoyen tableau"],
+["h","Europa","El juramento del Juego de Pelota","Le Serment du Jeu de paume","Jacques-Louis David","1791","Musée national du château de Versailles","Los diputados juran no separarse hasta dar una constitución a Francia.","David Serment du Jeu de paume"],
+["h","Europa","La Libertad guiando al pueblo","","Eugène Delacroix","1830","Museo del Louvre","La alegoría de la libertad más reconocida del mundo. Quizá demasiado vista.","Delacroix La Liberté guidant le peuple"],
+["h","Europa","La balsa de la Medusa","","Théodore Géricault","1818–1819","Museo del Louvre","Náufragos abandonados por un capitán nombrado por favor político: denuncia disfrazada de naufragio.","Géricault Le Radeau de la Méduse"],
+["h","Europa","Alegoría del buen gobierno","","Ambrogio Lorenzetti","1338–1339","Palazzo Pubblico, Siena","Pintada en la sala del gobierno de Siena para recordar a sus magistrados cómo luce una ciudad justa.","Lorenzetti Allegoria del Buon Governo"],
+["h","Europa","Alegoría del mal gobierno","","Ambrogio Lorenzetti","1338–1339","Palazzo Pubblico, Siena","La tiranía con la Justicia atada a sus pies. Frente a la anterior, es el constitucionalismo nominal en 1339.","Lorenzetti Allegoria del Cattivo Governo"],
+["h","Europa","Justicia e Injusticia","Iustitia, Iniustitia","Giotto di Bondone","c. 1305","Capilla de los Scrovegni, Padua","Dos figuras enfrentadas: el gobernante justo y el tirano. Par ideal para portada y contraportada.","Giotto Iustitia Iniustitia Scrovegni"],
+["h","Europa","La Justicia","","Rafael","1509–1511","Stanza della Segnatura, Vaticano","La Justicia con espada y balanza, en la sala donde se firmaban los documentos papales.","Rafael La Giustizia Stanza della Segnatura"],
+["h","Europa","El juicio de Cambises","","Gerard David","1498","Groeningemuseum, Brujas","Un juez corrupto desollado por orden del rey; pintado para la sala de justicia de Brujas como advertencia a los magistrados. Para un aspirante a magistrado, historia inmejorable, aunque la imagen es dura.","Gerard David The Judgement of Cambyses"],
+["h","Europa","La justicia del emperador Otón III","","Dirk Bouts","c. 1470–1475","Musées royaux des Beaux-Arts, Bruselas","Otro «panel de justicia» encargado para un ayuntamiento: el error judicial reparado por la verdad.","Dirk Bouts Justice of Emperor Otto III"],
+["h","Europa","Justitia","","Pieter Bruegel el Viejo","1559","Grabado, varias colecciones","La Justicia al centro, rodeada de tortura y ejecuciones: la ley proclamada frente a la ley aplicada.","Bruegel Justitia 1559 engraving"],
+["h","Europa","Calle Transnonain, 15 de abril de 1834","","Honoré Daumier","1834","Litografía, varias colecciones","Una familia masacrada por la tropa en su casa. Denuncia de la violencia estatal que costó censura.","Daumier Rue Transnonain 1834"],
+["h","Europa","El vientre legislativo","Le Ventre législatif","Honoré Daumier","1834","Litografía, varias colecciones","Los diputados como masa satisfecha y dormida: sátira del parlamento que no representa.","Daumier Le Ventre législatif"],
+["h","Europa","Jurisprudencia","Jurisprudenz","Gustav Klimt","1903–1907","Destruida en 1945; se conserva en fotografías","Encargada por la Universidad de Viena; mostraba a un condenado entre furias y a la Justicia lejana. Escándalo, retirada y destruida por el fuego. Solo quedan fotos en blanco y negro.","Klimt Jurisprudenz"],
+["h","Europa","El mar de hielo","Das Eismeer","Caspar David Friedrich","1823–1824","Hamburger Kunsthalle","Un barco aplastado entre placas de hielo; se lee como el naufragio de las esperanzas liberales tras 1815.","Caspar David Friedrich Das Eismeer"],
+["h","Europa","El barco negrero","The Slave Ship","J. M. W. Turner","1840","Museum of Fine Arts, Boston","Esclavos arrojados al mar para cobrar el seguro. Casi abstracta en color, brutal en historia.","Turner The Slave Ship 1840"],
+["h","Europa","Angelus Novus","","Paul Klee","1920","Museo de Israel, Jerusalén","Walter Benjamin lo compró y lo convirtió en el «ángel de la historia»: mira las ruinas del pasado mientras el progreso lo empuja. Dibujo simple, perfecto para portada.","Paul Klee Angelus Novus"],
+// Estados Unidos
+["h","Estados Unidos","Declaración de Independencia","","John Trumbull","1818","Rotonda del Capitolio, Washington","El comité presenta la Declaración al Congreso. La imagen fundacional de la orilla estadounidense.","John Trumbull Declaration of Independence painting"],
+["h","Estados Unidos","Washington como estadista en la Convención Constitucional","","Junius Brutus Stearns","1856","Virginia Museum of Fine Arts","El momento de firmar la Constitución de 1787: el pacto escrito como origen del poder.","Junius Brutus Stearns Washington Constitutional Convention"],
+["h","Estados Unidos","Washington cruzando el Delaware","","Emanuel Leutze","1851","Metropolitan Museum of Art","El cruce de un río de una orilla a otra. Pintado por un alemán para inspirar a los liberales europeos de 1848: une América y Europa.","Emanuel Leutze Washington Crossing the Delaware"],
+["h","Estados Unidos","Una cabalgata por la libertad: los esclavos fugitivos","","Eastman Johnson","c. 1862","Brooklyn Museum","Una familia huyendo al amanecer; el pintor dijo haberla presenciado. La libertad negativa que no alcanzaba a todos.","Eastman Johnson A Ride for Liberty The Fugitive Slaves"],
+["h","Estados Unidos","La Medea moderna (Margaret Garner)","","Thomas Satterwhite Noble","1867","Conocida por grabado en Harper's Weekly","El caso Garner: la ley la juzgó por destruir «propiedad» y no por homicidio. Derecho contra dignidad.","Thomas Satterwhite Noble The Modern Medea Margaret Garner"],
+["h","Estados Unidos","El veredicto del pueblo","The Verdict of the People","George Caleb Bingham","1854–1855","Saint Louis Art Museum","Una elección celebrada en la plaza, con ironía sobre quién votaba y quién no.","George Caleb Bingham The Verdict of the People"],
+["h","Estados Unidos","El curso del imperio: destrucción","","Thomas Cole","1836","New-York Historical Society","De una serie de cinco donde una república decae hasta la ruina. La erosión institucional como alegoría.","Thomas Cole Course of Empire Destruction"],
+["h","Estados Unidos","Prisioneros del frente","Prisoners from the Front","Winslow Homer","1866","Metropolitan Museum of Art","Soldados confederados rendidos ante un oficial de la Unión: la nación dividida frente a sí misma.","Winslow Homer Prisoners from the Front"]
+];
+const COL={"Venezuela":"var(--ven)","Latinoamérica":"var(--lat)","España":"var(--esp)","Europa":"var(--eur)","Estados Unidos":"var(--usa)","Puente latinoamericano":"var(--ven)","Orillas y luz":"var(--eur)","Geométrico y tensión":"var(--abs)","Lírico y orgánico":"var(--abs)"};
+const NOTE={"Puente latinoamericano":"Lo más cercano a Venezuela que está libre: Reverón y Boggio, más dos uruguayos clave.","Orillas y luz":"Abstracción que nace del agua y la costa, en diálogo con el título.","Geométrico y tensión":"Bloques y planos que se tocan sin fundirse: tres sistemas en un mismo espacio.","Lírico y orgánico":"Abstracción más libre y colorida, con varias historias de persecución y redescubrimiento.","Venezuela":"La orilla venezolana: independencia, constitución de 1811 y realismo social.","Latinoamérica":"El continente que comparte el problema de la constitución en el papel.","España":"La orilla que da nombre al libro: Goya, Cádiz y el liberalismo reprimido.","Europa":"Declaración de derechos, alegorías de la justicia y paneles pintados para salas de juicio.","Estados Unidos":"Fundación constitucional y los límites de la libertad negativa."};
+const items=D.map((d,i)=>({n:i+1,s:d[0],g:d[1],t:d[2],o:d[3],a:d[4],y:d[5],r:d[6],st:d[7],q:d[8],w:d[9]||""}));
+let picks=new Set();try{picks=new Set(JSON.parse(localStorage.getItem("portada-picks")||"[]"))}catch(e){}
+const save=()=>{try{localStorage.setItem("portada-picks",JSON.stringify([...picks]))}catch(e){}};
+let view="list";try{view=localStorage.getItem("portada-view")==="grid"?"grid":"list"}catch(e){}
+let S={s:"all",g:null,q:"",only:false};
+const pad=n=>String(n).padStart(3,"0");
+const esc=t=>t.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const norm=t=>t.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
+function chips(){
+  const gs=[...new Set(items.filter(x=>S.s==="all"||x.s===S.s).map(x=>x.g))];
+  if(S.g&&!gs.includes(S.g))S.g=null;
+  document.getElementById("chips").innerHTML=`<button class="chip" data-g="" aria-pressed="${!S.g}">Todos los grupos</button>`+gs.map(g=>`<button class="chip" data-g="${esc(g)}" aria-pressed="${S.g===g}"><i style="background:${COL[g]}"></i>${esc(g)}</button>`).join("");
+}
+function render(){
+  chips();
+  const qq=norm(S.q);
+  const f=items.filter(x=>(S.s==="all"||x.s===S.s)&&(!S.g||x.g===S.g)&&(!S.only||picks.has(x.n))&&(!qq||norm([x.t,x.o,x.a,x.y,x.r,x.st,x.g].join(" ")).includes(qq)));
+  let html="",last="";
+  if(!f.length)html=`<p class="empty">${S.only?"Aún no has marcado ninguna obra. Usa «Elegir» en las que te gusten.":"Ninguna obra coincide. Prueba otra palabra o quita el filtro de grupo."}</p>`;
+  let open=false;
+  for(const x of f){
+    if(x.g!==last){ if(open)html+="</ol>"; html+=`<h2 class="part">${esc(x.g)}</h2><p class="partnote">${esc(NOTE[x.g])}</p><ol class="list${view==="grid"?" grid":""}">`; open=true; last=x.g; }
+    const gq="https://www.google.com/search?tbm=isch&q="+encodeURIComponent(x.q);
+    const cq="https://commons.wikimedia.org/w/index.php?search="+encodeURIComponent(x.q)+"&title=Special:MediaSearch&type=image";
+    html+=`<li class="item" id="o${x.n}" style="--c:${COL[x.g]}"><div class="num">${x.n}</div><figure class="art"><a href="images/${pad(x.n)}.jpg" target="_blank" rel="noopener" aria-label="Abrir imagen: ${esc(x.t)}"><img src="images/${pad(x.n)}.jpg" alt="${esc(x.t+", "+x.a)}" loading="lazy" decoding="async"></a></figure><div>
+      <h3>${esc(x.t)}</h3>${x.o?`<div class="orig">${esc(x.o)}</div>`:""}
+      <p class="who">${esc(x.a)}, ${esc(x.y)}</p><p class="where">${esc(x.r)}</p>
+      <p class="story">${esc(x.st)}</p>${x.w?`<p class="warn">${esc(x.w)}</p>`:""}
+      <div class="links"><a href="${gq}" target="_blank" rel="noopener">Google Imágenes</a><a href="${cq}" target="_blank" rel="noopener">Wikimedia Commons</a>
+      <button class="pick" data-n="${x.n}" aria-pressed="${picks.has(x.n)}">${picks.has(x.n)?"Elegida":"Elegir"}</button></div></div></li>`;
+  }
+  if(open)html+="</ol>";
+  document.getElementById("main").innerHTML=html;
+  document.getElementById("count").textContent=`${f.length} obras visibles, ${picks.size} elegidas`;
+  document.getElementById("onlyPicks").setAttribute("aria-pressed",S.only);
+}
+document.getElementById("main").addEventListener("error",e=>{const im=e.target;if(im.tagName!=="IMG")return;const fg=im.closest("figure");fg.classList.add("none");fg.textContent="Imagen no disponible"},true);
+document.querySelectorAll("#view button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.v===view));
+document.getElementById("view").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;view=b.dataset.v;try{localStorage.setItem("portada-view",view)}catch(x){}document.querySelectorAll("#view button").forEach(x=>x.setAttribute("aria-pressed",x===b));render()});
+document.querySelector(".seg").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;S.s=b.dataset.s;document.querySelectorAll(".seg:not(#view) button").forEach(x=>x.setAttribute("aria-pressed",x===b));render()});
+document.getElementById("chips").addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;S.g=b.dataset.g||null;render()});
+document.getElementById("q").addEventListener("input",e=>{S.q=e.target.value;render()});
+document.getElementById("onlyPicks").addEventListener("click",()=>{S.only=!S.only;render()});
+document.getElementById("main").addEventListener("click",e=>{const b=e.target.closest(".pick");if(!b)return;const n=+b.dataset.n;picks.has(n)?picks.delete(n):picks.add(n);save();b.setAttribute("aria-pressed",picks.has(n));b.textContent=picks.has(n)?"Elegida":"Elegir";document.getElementById("count").textContent=document.getElementById("count").textContent.replace(/\d+ elegidas/,picks.size+" elegidas")});
+document.getElementById("copy").addEventListener("click",async()=>{
+  const sel=items.filter(x=>picks.has(x.n));
+  const txt=sel.length?"Selección para la portada de Tres orillas de la libertad:\n"+sel.map(x=>`${x.n}. ${x.t}, ${x.a} (${x.y})`).join("\n"):"";
+  const out=document.getElementById("out"),ta=document.getElementById("outText"),btn=document.getElementById("copy");
+  if(!txt){ta.value="Marca primero alguna obra con «Elegir».";out.style.display="block";return}
+  ta.value=txt;out.style.display="block";
+  try{await navigator.clipboard.writeText(txt);btn.textContent="Selección copiada"}catch(e){ta.select();btn.textContent="Selecciona y copia el texto"}
+  setTimeout(()=>btn.textContent="Copiar mi selección",2500);
+});
+render();
+</script>
+</body>
+</html>
