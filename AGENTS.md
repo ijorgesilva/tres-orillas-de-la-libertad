@@ -4,7 +4,7 @@ Context for any AI agent (or person) working in this repo.
 
 ## What this project is
 
-A curated gallery of 100 public-domain artworks proposed as the cover of the book
+A curated gallery of 150 public-domain artworks (100 original + 50 added later) proposed as the cover of the book
 **"Tres orillas de la libertad. Derechos civiles y garantías constitucionales en Venezuela,
 Estados Unidos y España"**: a comparative constitutional-law monograph by a Venezuelan judge
 who is a candidate for magistrate of the TSJ (Tribunal Supremo de Justicia).
@@ -26,9 +26,9 @@ The site lets the author browse the works, mark favorites ("Elegir"), and copy t
 |---|---|
 | `index.html` | The site. Single self-contained file (CSS + JS inline). Served by Pages. |
 | `Cien obras para la portada de Tres orillas de la libertad.html` | Original copy of the same page, kept as the author received it. Keep in sync with `index.html` or retire it. |
-| `images/NNN.jpg` | One thumbnail (~640px) per work; `NNN` is the zero-padded work number (`001`..`100`). |
+| `images/NNN.jpg` | One thumbnail (~640px) per work; `NNN` is the work number (`001`..`150`). |
 | `images/sources.json` | Wikimedia Commons file title each image came from (first-pass search; not every entry is hand-verified). |
-| `FICHAS.md`, `fichas.html` | Per-work research sheets (qualification, verified story, cover suitability, risks), when present. |
+| `FICHAS.md`, `fichas.html` | Per-work research sheets (qualification, verified story, cover suitability, risks) for works 1-100. |
 
 ## Data model
 
@@ -40,6 +40,7 @@ All works live in the JS array `D` inside `index.html`. Each row is:
 - The **work number is the 1-based position in `D`**. It is also the image filename and the
   key used in saved picks. Never reorder or insert rows in the middle; append or edit in place,
   otherwise images and users' saved selections point at the wrong works.
+- Render order: sections follow the first appearance of each group in `D`; works are sorted by group, then number, so rows 101+ appear under their existing headings.
 - Groups and colors: `COL` and `NOTE` maps in the same file.
 
 ## Features to preserve
@@ -83,7 +84,7 @@ All works live in the JS array `D` inside `index.html`. Each row is:
    shore/idea of the thesis it reinforces; the story behind it, verified by web search; cover suitability
    (title legibility, crop, tone for a TSJ candidate); risks (violence, political charge, public-domain
    doubts). Correct any wrong year or museum. Deliver as `FICHAS.md` + `fichas.html`.
-2. **50 new works**, none repeating the catalog. Criteria: public domain (artist died before 1956),
+2. **50 new works** (DONE: added as 101-150, images in `images/101.jpg`-`150.jpg`, sources in `images/sources2.json`; they have no fichas yet; flagged data issues are in each row's warning field), none repeating the catalog. Criteria: public domain (artist died before 1956),
    verified by web search. Priority order: Venezuela and Latin America, then Spain, then the rest.
    Look for stories tied to constitutions, rights, justice, judges, abuse of power, or shores and rivers,
    plus sober abstracts suited to an academic book. Use the same fields as the catalog: title, original
