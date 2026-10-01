@@ -46,8 +46,7 @@ All works live in the JS array `D` inside `index.html`. Each row is:
 
 ## Features to preserve
 
-- **Detail modal** (`<dialog id="dlg">`): full description, "Por qué y cómo se relaciona con el libro", cover suitability and risks, hi-res image from Commons (`Special:FilePath?width=1600`) with click-to-zoom, prev/next (arrow keys) over the filtered list.
-- **Cover preview** tab: A4 (210x297) mockup with the book title, subtitle and author **Alfredo Montiel**; layouts A sangre / Enmarcada, light/dark text. Book text lives in the `BOOK` constant in `index.html`.
+- **Modal** (`<dialog id="dlg">`, single view, no tabs): A4 cover preview on the left (title, subtitle, author **Alfredo Montiel**; layouts A sangre / Enmarcada / Solo imagen with hi-res click-to-zoom; version Oscura (default) / Clara) and all text on the right (full description, "Por qué y cómo se relaciona con el libro", cover suitability, risks, corrections). Nothing is hidden behind clicks. Hi-res image comes from Commons (`Special:FilePath?width=1600`); prev/next with arrow keys over the filtered list. Book text lives in the `BOOK` constant.
 
 - Filters: type (Todas / Abstractas / Con historia), group chips, free-text search (accent-insensitive).
 - **Lista / Cuadrícula** view toggle (`#view`), persisted in `localStorage["portada-view"]`.
