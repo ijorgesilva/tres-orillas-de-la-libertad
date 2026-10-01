@@ -27,6 +27,7 @@ The site lets the author browse the works, mark favorites ("Elegir"), and copy t
 | `index.html` | The site. Single self-contained file (CSS + JS inline). Served by Pages. |
 | `Cien obras para la portada de Tres orillas de la libertad.html` | Original copy of the same page, kept as the author received it. Keep in sync with `index.html` or retire it. |
 | `images/NNN.jpg` | One thumbnail (~640px) per work; `NNN` is the work number (`001`..`150`). |
+| `fichas-data.js` | Generated data loaded by `index.html`: `FI` (relation to the book for all 150; cover suitability, risks, verdict and catalog corrections for 1-100) and `SRC` (Commons file title per work, used for the hi-res image in the modal). Regenerate it when fichas change. |
 | `images/sources.json` | Wikimedia Commons file title each image came from (first-pass search; not every entry is hand-verified). |
 | `FICHAS.md`, `fichas.html` | Per-work research sheets (qualification, verified story, cover suitability, risks) for works 1-100. |
 
@@ -44,6 +45,9 @@ All works live in the JS array `D` inside `index.html`. Each row is:
 - Groups and colors: `COL` and `NOTE` maps in the same file.
 
 ## Features to preserve
+
+- **Detail modal** (`<dialog id="dlg">`): full description, "Por qué y cómo se relaciona con el libro", cover suitability and risks, hi-res image from Commons (`Special:FilePath?width=1600`) with click-to-zoom, prev/next (arrow keys) over the filtered list.
+- **Cover preview** tab: A4 (210x297) mockup with the book title, subtitle and author **Alfredo Montiel**; layouts A sangre / Enmarcada, light/dark text. Book text lives in the `BOOK` constant in `index.html`.
 
 - Filters: type (Todas / Abstractas / Con historia), group chips, free-text search (accent-insensitive).
 - **Lista / Cuadrícula** view toggle (`#view`), persisted in `localStorage["portada-view"]`.

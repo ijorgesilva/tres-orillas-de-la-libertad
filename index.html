@@ -68,6 +68,60 @@ ol.list{list-style:none;margin:0;padding:0}
 .pick[aria-pressed="true"]{background:var(--star);border-color:var(--star);color:#1a1300}
 .grp{font-size:.8rem;color:var(--muted)}
 .empty{padding:40px 0;color:var(--muted)}
+.act.detail{padding:7px 11px;font-size:.88rem}
+body.modal{overflow:hidden}
+dialog#dlg{border:0;padding:0;border-radius:14px;background:var(--panel);color:var(--ink);width:min(1100px,96vw);max-width:96vw;height:min(92dvh,900px);max-height:96dvh;overflow:hidden}
+dialog#dlg[open]{display:flex;flex-direction:column}
+dialog#dlg::backdrop{background:rgba(5,8,16,.72)}
+.dhead{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid var(--rule)}
+.dnav{display:flex;align-items:center;gap:6px}
+.dnav button{border:1px solid var(--rule);background:var(--panel);color:var(--ink);border-radius:8px;width:36px;height:36px;font-size:1.1rem;cursor:pointer}
+.dnav button:hover{border-color:var(--ink)}
+.dnav span{color:var(--muted);font-size:.82rem;min-width:64px;text-align:center}
+.dbody{flex:1;overflow:auto;padding:18px 20px 24px;min-height:0}
+.dgrid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:22px;align-items:start}
+.dimg{background:var(--chip);border-radius:10px;overflow:auto;max-height:calc(92dvh - 150px);display:flex;align-items:flex-start;justify-content:center;cursor:zoom-in;position:sticky;top:0}
+.dimg img{display:block;width:100%;height:auto;max-height:calc(92dvh - 150px);object-fit:contain}
+.dimg.zoom{cursor:zoom-out;display:block}
+.dimg.zoom img{width:220%;max-width:none;max-height:none;height:auto}
+.dhint{color:var(--muted);font-size:.8rem;margin:6px 0 0}
+.dtxt h2{font-family:"Libre Caslon Text",Georgia,serif;font-weight:700;font-size:1.5rem;line-height:1.2;margin:0 0 2px}
+.dtxt .orig{margin:0}
+.dtxt h3{font:600 .78rem/1 "Public Sans",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:20px 0 6px}
+.dtxt p{margin:0 0 8px;font-family:"Libre Caslon Text",Georgia,serif;line-height:1.7}
+.dtxt p.sans{font-family:"Public Sans",sans-serif;font-size:.9rem;line-height:1.55}
+.badge{display:inline-block;border-radius:999px;padding:3px 10px;font:600 .75rem/1.2 "Public Sans",sans-serif;color:#fff;margin:0 6px 6px 0;background:var(--abs)}
+.fixbox{background:color-mix(in srgb,var(--esp) 14%,transparent);border-left:3px solid var(--esp);padding:6px 10px;border-radius:4px;font-size:.88rem}
+.dactions{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.cover-wrap{display:grid;grid-template-columns:auto minmax(220px,300px);gap:28px;justify-content:center;align-items:start}
+.book{position:relative;aspect-ratio:210/297;width:min(440px,calc(96vw - 60px),calc((92dvh - 190px) * .7071));container-type:inline-size;overflow:hidden;background:#111;box-shadow:0 18px 40px rgba(0,0,0,.35),0 2px 6px rgba(0,0,0,.3);font-family:"Libre Caslon Text",Georgia,serif}
+.book img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.book .scrim{position:absolute;inset:0}
+.book .bt{position:absolute;left:8cqw;right:8cqw;top:7.5cqw;color:#fff}
+.book .bt .ttl{font-size:11.5cqw;line-height:1.02;letter-spacing:-.01em;font-weight:400;margin:0 0 3.4cqw}
+.book .bt .sub{font:400 3.1cqw/1.4 "Public Sans",system-ui,sans-serif;max-width:78%;opacity:.95}
+.book .au{position:absolute;left:8cqw;right:8cqw;bottom:7cqw;color:#fff;font:600 4.2cqw/1 "Public Sans",system-ui,sans-serif;letter-spacing:.2em;text-transform:uppercase}
+.book .st{position:absolute;left:8cqw;bottom:14cqw;display:flex;gap:1cqw;width:34cqw}
+.book .st span{height:1.1cqw;flex:1}
+.book .st span:nth-child(1){background:#7A2E4A}.book .st span:nth-child(2){background:#3A6EA5}.book .st span:nth-child(3){background:#C08A1E}
+.book.full.tl .scrim{background:linear-gradient(to bottom,rgba(10,16,30,.82) 0,rgba(10,16,30,.35) 34%,rgba(10,16,30,0) 56%,rgba(10,16,30,.35) 80%,rgba(10,16,30,.85) 100%)}
+.book.full.td .scrim{background:linear-gradient(to bottom,rgba(250,247,240,.9) 0,rgba(250,247,240,.45) 34%,rgba(250,247,240,0) 56%,rgba(250,247,240,.45) 80%,rgba(250,247,240,.9) 100%)}
+.book.full.td .bt,.book.full.td .au{color:#14213D}
+.book.frame{background:#F4EFE4}
+.book.frame.tl{background:#14213D}
+.book.frame .bt{top:8cqw;color:#14213D}
+.book.frame.tl .bt,.book.frame.tl .au{color:#fff}
+.book.frame .au{color:#14213D}
+.book.frame .bt .sub{max-width:100%}
+.book.frame .ph{position:absolute;left:8cqw;right:8cqw;top:43cqw;bottom:25cqw;background:rgba(127,127,127,.12)}
+.book.frame .ph img{position:static;object-fit:contain}
+.book.frame .st{bottom:17cqw}
+.book.frame .scrim{display:none}
+.cctl h3{font:600 .78rem/1 "Public Sans",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+.cctl .grp2{margin:0 0 18px}
+.cctl p{font-size:.88rem;color:var(--muted);margin:0 0 8px}
+@media (max-width:820px){.dgrid{grid-template-columns:1fr}.dimg{position:static;max-height:60dvh}.cover-wrap{grid-template-columns:1fr;justify-items:center}.cctl{width:100%}}
+
 figure.art{grid-column:2;margin:0 0 12px;background:var(--chip);border-radius:8px;overflow:hidden;display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;max-width:420px}
 figure.art a{display:flex;width:100%;height:100%}
 figure.art img{width:100%;height:100%;object-fit:contain;display:block}
@@ -97,7 +151,7 @@ footer p{max-width:70ch}
   <div class="shores" aria-hidden="true"><span></span><span></span><span></span></div>
   <p class="lede">Propuestas de dominio público para <em>Tres orillas de la libertad</em>: cincuenta y ocho abstractas y noventa y dos con historia detrás, con prioridad en Venezuela y Latinoamérica. Marca las que te gusten y copia tu selección para enviársela al autor.</p>
   <p class="fine">Criterio de dominio público: autores fallecidos antes de 1956, libres en Venezuela (60 años tras la muerte) y en casi todo el mundo (70 años). Dos excepciones van señaladas. La abstracción venezolana clásica (Soto, Cruz-Diez, Otero, Gego) sigue protegida; se podría licenciar con sus herederos, pero no entra aquí.</p>
-  <p class="fine">Las imágenes son miniaturas descargadas de Wikimedia Commons (pulsa una para abrirla). Las <a href="fichas.html">fichas de investigación</a> detallan las obras 1 a 100 (las nuevas, 101 a 150, aún no tienen ficha): por qué califica, su historia, su idoneidad como portada y sus riesgos. Los enlaces abren una búsqueda ya armada en Google Imágenes o en Wikimedia Commons. Años y ubicaciones conviene confirmarlos en el museo antes de imprimir; para alta resolución sin restricciones, prioriza Commons, el Met, la National Gallery of Art y el Rijksmuseum.</p>
+  <p class="fine">Las imágenes son miniaturas descargadas de Wikimedia Commons (pulsa una para ver el detalle). Las <a href="fichas.html">fichas de investigación</a> detallan las obras 1 a 100 (las nuevas, 101 a 150, aún no tienen ficha): por qué califica, su historia, su idoneidad como portada y sus riesgos. Los enlaces abren una búsqueda ya armada en Google Imágenes o en Wikimedia Commons. Años y ubicaciones conviene confirmarlos en el museo antes de imprimir; para alta resolución sin restricciones, prioriza Commons, el Met, la National Gallery of Art y el Rijksmuseum.</p>
 </header>
 </div>
 <div class="bar"><div class="wrap">
@@ -122,9 +176,23 @@ footer p{max-width:70ch}
   <div id="out"><textarea id="outText" readonly aria-label="Tu selección"></textarea></div>
 </div></div>
 <main class="wrap" id="main"></main>
+<dialog id="dlg" aria-label="Detalle de la obra">
+  <div class="dhead">
+    <div class="seg" role="group" aria-label="Modo" id="dtabs">
+      <button data-t="det" aria-pressed="true">Detalle</button>
+      <button data-t="cov" aria-pressed="false">Vista de portada</button>
+    </div>
+    <div class="dnav">
+      <button id="dPrev" aria-label="Obra anterior">&#8249;</button><span id="dPos"></span><button id="dNext" aria-label="Obra siguiente">&#8250;</button>
+      <button id="dClose" aria-label="Cerrar">&#10005;</button>
+    </div>
+  </div>
+  <div class="dbody" id="dBody"></div>
+</dialog>
 <div class="wrap"><footer>
   <p>Sobre las fotografías: en Venezuela y la Unión Europea, la foto fiel de una pintura en dominio público no genera derechos nuevos, pero revisa la licencia de cada archivo en Commons antes de usarlo. Esto es orientación práctica, no asesoría legal.</p>
 </footer></div>
+<script src="fichas-data.js"></script>
 <script>
 const D=[
 // ABSTRACTAS — puente latinoamericano
@@ -295,6 +363,7 @@ const items=D.map((d,i)=>({n:i+1,s:d[0],g:d[1],t:d[2],o:d[3],a:d[4],y:d[5],r:d[6
 let picks=new Set();try{picks=new Set(JSON.parse(localStorage.getItem("portada-picks")||"[]"))}catch(e){}
 const save=()=>{try{localStorage.setItem("portada-picks",JSON.stringify([...picks]))}catch(e){}};
 let view="grid";try{view=localStorage.getItem("portada-view")==="list"?"list":"grid"}catch(e){}
+let curList=[];
 let S={s:"all",g:null,q:"",only:false};
 const pad=n=>String(n).padStart(3,"0");
 const esc=t=>t.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -309,6 +378,7 @@ function render(){
   const qq=norm(S.q);
   const f=items.filter(x=>(S.s==="all"||x.s===S.s)&&(!S.g||x.g===S.g)&&(!S.only||picks.has(x.n))&&(!qq||norm([x.t,x.o,x.a,x.y,x.r,x.st,x.g].join(" ")).includes(qq)));
   f.sort((a,b)=>GO.indexOf(a.g)-GO.indexOf(b.g)||a.n-b.n);
+  curList=f.map(x=>x.n);
   let html="",last="";
   if(!f.length)html=`<p class="empty">${S.only?"Aún no has marcado ninguna obra. Usa «Elegir» en las que te gusten.":"Ninguna obra coincide. Prueba otra palabra o quita el filtro de grupo."}</p>`;
   let open=false;
@@ -316,11 +386,12 @@ function render(){
     if(x.g!==last){ if(open)html+="</ol>"; html+=`<h2 class="part">${esc(x.g)}</h2><p class="partnote">${esc(NOTE[x.g])}</p><ol class="list${view==="grid"?" grid":""}">`; open=true; last=x.g; }
     const gq="https://www.google.com/search?tbm=isch&q="+encodeURIComponent(x.q);
     const cq="https://commons.wikimedia.org/w/index.php?search="+encodeURIComponent(x.q)+"&title=Special:MediaSearch&type=image";
-    html+=`<li class="item" id="o${x.n}" style="--c:${COL[x.g]}"><div class="num">${x.n}</div><figure class="art"><a href="images/${pad(x.n)}.jpg" target="_blank" rel="noopener" aria-label="Abrir imagen: ${esc(x.t)}"><img src="images/${pad(x.n)}.jpg" alt="${esc(x.t+", "+x.a)}" loading="lazy" decoding="async"></a></figure><div>
+    html+=`<li class="item" id="o${x.n}" style="--c:${COL[x.g]}"><div class="num">${x.n}</div><figure class="art"><a href="images/${pad(x.n)}.jpg" data-open="${x.n}" aria-label="Ver detalle: ${esc(x.t)}"><img src="images/${pad(x.n)}.jpg" alt="${esc(x.t+", "+x.a)}" loading="lazy" decoding="async"></a></figure><div>
       <h3>${esc(x.t)}</h3>${x.o?`<div class="orig">${esc(x.o)}</div>`:""}
       <p class="who">${esc(x.a)}, ${esc(x.y)}</p><p class="where">${esc(x.r)}</p>
       <p class="story">${esc(x.st)}</p>${x.w?`<p class="warn">${esc(x.w)}</p>`:""}
       <div class="links"><a href="${gq}" target="_blank" rel="noopener">Google Imágenes</a><a href="${cq}" target="_blank" rel="noopener">Wikimedia Commons</a>
+      <button class="act detail" data-open="${x.n}">Ver detalle</button>
       <button class="pick" data-n="${x.n}" aria-pressed="${picks.has(x.n)}">${picks.has(x.n)?"Elegida":"Elegir"}</button></div></div></li>`;
   }
   if(open)html+="</ol>";
@@ -345,6 +416,78 @@ document.getElementById("copy").addEventListener("click",async()=>{
   try{await navigator.clipboard.writeText(txt);btn.textContent="Selección copiada"}catch(e){ta.select();btn.textContent="Selecciona y copia el texto"}
   setTimeout(()=>btn.textContent="Copiar mi selección",2500);
 });
+/* ---- Modal: detalle y vista de portada ---- */
+const BOOK={t:"Tres orillas de la libertad",s:"Derechos civiles y garantías constitucionales en Venezuela, Estados Unidos y España",a:"Alfredo Montiel"};
+const VC={"Recomendada":"var(--lat)","Viable con reservas":"var(--ven)","No recomendada":"var(--esp)"};
+const dlg=document.getElementById("dlg"),dBody=document.getElementById("dBody");
+let cur=null,tab="det",lay="full",tone="l";
+const byN=n=>items.find(x=>x.n===n);
+const hasFI=typeof FI!=="undefined",hasSRC=typeof SRC!=="undefined";
+const fileTitle=n=>hasSRC&&SRC[n]?SRC[n].replace(/^File:/,""):"";
+const hiRes=n=>fileTitle(n)?"https://commons.wikimedia.org/wiki/Special:FilePath/"+encodeURIComponent(fileTitle(n))+"?width=1600":"";
+function upgradeImg(img,n){const u=hiRes(n);if(!u)return;const t=new Image();t.onload=()=>{if(cur===n)img.src=u};t.src=u}
+function sec(h,t,cls){return t?`<h3>${h}</h3><p${cls?` class="${cls}"`:""}>${esc(t)}</p>`:""}
+function detailHTML(x){
+  const fi=hasFI&&FI[x.n]||{};
+  const cm=fileTitle(x.n)?"https://commons.wikimedia.org/wiki/File:"+encodeURIComponent(fileTitle(x.n)):"https://commons.wikimedia.org/w/index.php?search="+encodeURIComponent(x.q)+"&title=Special:MediaSearch&type=image";
+  const gq="https://www.google.com/search?tbm=isch&q="+encodeURIComponent(x.q);
+  return `<div class="dgrid"><div><div class="dimg" id="dimg" title="Clic para ampliar"><img id="dimgEl" src="images/${pad(x.n)}.jpg" alt="${esc(x.t+", "+x.a)}"></div><p class="dhint">Clic en la imagen para ampliar o reducir.${fileTitle(x.n)?" Se carga la versión de alta resolución desde Wikimedia Commons.":""}</p></div>
+  <div class="dtxt"><h2 id="dTitle">${x.n}. ${esc(x.t)}</h2>${x.o?`<div class="orig">${esc(x.o)}</div>`:""}
+  <p class="who sans" style="margin-top:6px"><strong>${esc(x.a)}</strong>, ${esc(x.y)}<br><span style="color:var(--muted)">${esc(x.r)}</span></p>
+  <p style="margin:0"><span class="badge" style="background:${COL[x.g]}">${esc(x.g)}</span>${fi.v?`<span class="badge" style="background:${VC[fi.v]||"var(--abs)"}">${esc(fi.v)}</span>`:""}</p>
+  ${sec("Descripción completa",x.st)}
+  ${x.w?`<p class="sans fixbox">${esc(x.w)}</p>`:""}
+  ${fi.c?`<p class="sans fixbox"><strong>Corrección al catálogo:</strong> ${esc(fi.c)}</p>`:""}
+  ${sec("Por qué y cómo se relaciona con el libro",fi.r||"Pendiente de redactar.")}
+  ${sec("Como portada",fi.p)}${sec("Riesgos",fi.k)}
+  ${fi.x?`<p class="sans" style="color:var(--muted)">Verificación de datos: ${esc(fi.x)}.</p>`:""}
+  <div class="dactions"><button class="act primary" data-go="cov">Ver como portada A4</button><button class="pick" data-n="${x.n}" aria-pressed="${picks.has(x.n)}">${picks.has(x.n)?"Elegida":"Elegir"}</button><a class="act" href="${cm}" target="_blank" rel="noopener" style="text-decoration:none">Archivo en Commons</a><a class="act" href="${gq}" target="_blank" rel="noopener" style="text-decoration:none">Google Imágenes</a></div></div></div>`;
+}
+function coverHTML(x){
+  const cls=`book ${lay} t${tone}`;
+  const img=`images/${pad(x.n)}.jpg`;
+  const inner=lay==="full"
+    ?`<img id="bookImg" src="${img}" alt=""><div class="scrim"></div>`
+    :`<div class="ph"><img id="bookImg" src="${img}" alt=""></div>`;
+  return `<div class="cover-wrap"><div class="${cls}" id="book">${inner}
+    <div class="bt"><h2 class="ttl">${esc(BOOK.t)}</h2><div class="sub">${esc(BOOK.s)}</div></div>
+    <div class="st" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="au">${esc(BOOK.a)}</div></div>
+    <div class="cctl"><h2 style="font-family:'Libre Caslon Text',Georgia,serif;font-weight:700;font-size:1.2rem;margin:0 0 4px">${x.n}. ${esc(x.t)}</h2>
+    <p>${esc(x.a)}, ${esc(x.y)}</p>
+    <div class="grp2"><h3>Diseño</h3><div class="seg" id="layS" role="group" aria-label="Diseño"><button data-l="full" aria-pressed="${lay==="full"}">A sangre</button><button data-l="frame" aria-pressed="${lay==="frame"}">Enmarcada</button></div></div>
+    <div class="grp2"><h3>Texto</h3><div class="seg" id="toneS" role="group" aria-label="Color del texto"><button data-k="l" aria-pressed="${tone==="l"}">Claro</button><button data-k="d" aria-pressed="${tone==="d"}">Oscuro</button></div></div>
+    <p>Vista previa en proporción A4 (210 × 297 mm) con el título del libro y el autor. «A sangre» recorta la obra para llenar la portada; «Enmarcada» la muestra completa.</p>
+    <div class="dactions" style="margin-top:8px"><button class="pick" data-n="${x.n}" aria-pressed="${picks.has(x.n)}">${picks.has(x.n)?"Elegida":"Elegir"}</button><button class="act" data-go="det">Volver al detalle</button></div></div></div>`;
+}
+function paintDlg(){
+  const x=byN(cur);if(!x)return;
+  dBody.innerHTML=tab==="det"?detailHTML(x):coverHTML(x);
+  dBody.scrollTop=0;
+  document.querySelectorAll("#dtabs button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.t===tab));
+  const i=curList.indexOf(cur);
+  document.getElementById("dPos").textContent=i>=0?`${i+1} / ${curList.length}`:"";
+  const im=document.getElementById(tab==="det"?"dimgEl":"bookImg");if(im)upgradeImg(im,cur);
+  im&&im.addEventListener("error",()=>{im.alt="Imagen no disponible";im.removeAttribute("src")},{once:true});
+}
+function openDlg(n,t){cur=n;tab=t||"det";if(!dlg.open){dlg.showModal();document.body.classList.add("modal")}paintDlg()}
+function step(d){if(!curList.length)return;const i=curList.indexOf(cur);cur=curList[(i+d+curList.length)%curList.length];paintDlg()}
+document.getElementById("main").addEventListener("click",e=>{const o=e.target.closest("[data-open]");if(!o)return;e.preventDefault();openDlg(+o.dataset.open,"det")});
+document.getElementById("dtabs").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;tab=b.dataset.t;paintDlg()});
+document.getElementById("dPrev").addEventListener("click",()=>step(-1));
+document.getElementById("dNext").addEventListener("click",()=>step(1));
+document.getElementById("dClose").addEventListener("click",()=>dlg.close());
+dlg.addEventListener("close",()=>document.body.classList.remove("modal"));
+dlg.addEventListener("click",e=>{if(e.target===dlg)dlg.close()});
+dlg.addEventListener("keydown",e=>{if(e.key==="ArrowRight"){e.preventDefault();step(1)}else if(e.key==="ArrowLeft"){e.preventDefault();step(-1)}});
+dBody.addEventListener("click",e=>{
+  const g=e.target.closest("[data-go]");if(g){tab=g.dataset.go;paintDlg();return}
+  const l=e.target.closest("#layS button");if(l){lay=l.dataset.l;paintDlg();return}
+  const k=e.target.closest("#toneS button");if(k){tone=k.dataset.k;paintDlg();return}
+  const d=e.target.closest("#dimg");if(d){d.classList.toggle("zoom");return}
+  const p=e.target.closest(".pick");if(p){const n=+p.dataset.n;picks.has(n)?picks.delete(n):picks.add(n);save();p.setAttribute("aria-pressed",picks.has(n));p.textContent=picks.has(n)?"Elegida":"Elegir";render()}
+});
+
 render();
 </script>
 </body>
