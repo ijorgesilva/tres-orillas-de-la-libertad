@@ -179,8 +179,8 @@ footer p{max-width:70ch}
 <dialog id="dlg" aria-label="Detalle de la obra">
   <div class="dhead">
     <div class="seg" role="group" aria-label="Modo" id="dtabs">
-      <button data-t="det" aria-pressed="true">Detalle</button>
-      <button data-t="cov" aria-pressed="false">Vista de portada</button>
+      <button data-t="cov" aria-pressed="true">Portada</button>
+      <button data-t="det" aria-pressed="false">Detalle</button>
     </div>
     <div class="dnav">
       <button id="dPrev" aria-label="Obra anterior">&#8249;</button><span id="dPos"></span><button id="dNext" aria-label="Obra siguiente">&#8250;</button>
@@ -420,7 +420,7 @@ document.getElementById("copy").addEventListener("click",async()=>{
 const BOOK={t:"Tres orillas de la libertad",s:"Derechos civiles y garantías constitucionales en Venezuela, Estados Unidos y España",a:"Alfredo Montiel"};
 const VC={"Recomendada":"var(--lat)","Viable con reservas":"var(--ven)","No recomendada":"var(--esp)"};
 const dlg=document.getElementById("dlg"),dBody=document.getElementById("dBody");
-let cur=null,tab="det",lay="full",tone="l";
+let cur=null,tab="cov",lay="full",tone="l";
 const byN=n=>items.find(x=>x.n===n);
 const hasFI=typeof FI!=="undefined",hasSRC=typeof SRC!=="undefined";
 const fileTitle=n=>hasSRC&&SRC[n]?SRC[n].replace(/^File:/,""):"";
@@ -456,7 +456,7 @@ function coverHTML(x){
     <div class="cctl"><h2 style="font-family:'Libre Caslon Text',Georgia,serif;font-weight:700;font-size:1.2rem;margin:0 0 4px">${x.n}. ${esc(x.t)}</h2>
     <p>${esc(x.a)}, ${esc(x.y)}</p>
     <div class="grp2"><h3>Diseño</h3><div class="seg" id="layS" role="group" aria-label="Diseño"><button data-l="full" aria-pressed="${lay==="full"}">A sangre</button><button data-l="frame" aria-pressed="${lay==="frame"}">Enmarcada</button></div></div>
-    <div class="grp2"><h3>Texto</h3><div class="seg" id="toneS" role="group" aria-label="Color del texto"><button data-k="l" aria-pressed="${tone==="l"}">Claro</button><button data-k="d" aria-pressed="${tone==="d"}">Oscuro</button></div></div>
+    <div class="grp2"><h3>Versión</h3><div class="seg" id="toneS" role="group" aria-label="Versión de la portada"><button data-k="l" aria-pressed="${tone==="l"}">Oscura</button><button data-k="d" aria-pressed="${tone==="d"}">Clara</button></div></div>
     <p>Vista previa en proporción A4 (210 × 297 mm) con el título del libro y el autor. «A sangre» recorta la obra para llenar la portada; «Enmarcada» la muestra completa.</p>
     <div class="dactions" style="margin-top:8px"><button class="pick" data-n="${x.n}" aria-pressed="${picks.has(x.n)}">${picks.has(x.n)?"Elegida":"Elegir"}</button><button class="act" data-go="det">Volver al detalle</button></div></div></div>`;
 }
@@ -470,9 +470,9 @@ function paintDlg(){
   const im=document.getElementById(tab==="det"?"dimgEl":"bookImg");if(im)upgradeImg(im,cur);
   im&&im.addEventListener("error",()=>{im.alt="Imagen no disponible";im.removeAttribute("src")},{once:true});
 }
-function openDlg(n,t){cur=n;tab=t||"det";if(!dlg.open){dlg.showModal();document.body.classList.add("modal")}paintDlg()}
+function openDlg(n,t){cur=n;tab=t||"cov";if(!dlg.open){dlg.showModal();document.body.classList.add("modal")}paintDlg()}
 function step(d){if(!curList.length)return;const i=curList.indexOf(cur);cur=curList[(i+d+curList.length)%curList.length];paintDlg()}
-document.getElementById("main").addEventListener("click",e=>{const o=e.target.closest("[data-open]");if(!o)return;e.preventDefault();openDlg(+o.dataset.open,"det")});
+document.getElementById("main").addEventListener("click",e=>{const o=e.target.closest("[data-open]");if(!o)return;e.preventDefault();openDlg(+o.dataset.open,"cov")});
 document.getElementById("dtabs").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;tab=b.dataset.t;paintDlg()});
 document.getElementById("dPrev").addEventListener("click",()=>step(-1));
 document.getElementById("dNext").addEventListener("click",()=>step(1));
